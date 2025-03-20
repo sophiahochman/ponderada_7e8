@@ -50,6 +50,11 @@ C) O código avalia a expressão booleana, imprime `true` e, em seguida, verific
 D) O código avalia a expressão booleana, imprime `false` e ordena os valores em ordem crescente.
 
 
+**Reposta: Alternativa: A**
+
+Justificativa:
+
+O código avalia a expressão booleana, que, quando simplificada, resulta em true || true, ou seja, true. Em seguida, ele imprime true. Como não há necessidade de busca ou ordenação de elementos, a expressão foi resolvida calculando e exibindo o produto dos valores do array.
 ______
 
 **2)** O código a seguir contém duas funções que calculam o limite de crédito de um cliente com base nos seus gastos e na renda mensal.
@@ -110,7 +115,15 @@ B) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -60
 C) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.', enquanto analisarCredito2() exibirá: 'Seu crédito foi aprovado. Saldo disponível: 100.'
 
 D) Ambas as funções exibirão: 'Seu crédito foi aprovado Saldo disponível: 500.'
+
+
+**Reposta: Alternativa: A**
+
+Justificativa:
+
+As duas funções avaliam um conjunto fixo de compras e determinam se o total excede o limite de crédito. A distinção entre do...while e while não influencia o resultado neste caso, pois o loop sempre começa com um valor que garante sua execução. Como o total das compras permanece dentro do limite permitido, o crédito é aprovado, mantendo um saldo disponível positivo.
 ______
+
 
 **3)** Considere o seguinte trecho de código em JavaScript:
 ```javascript
@@ -134,6 +147,16 @@ B) O código verifica se a idade pertence à faixa adulta. Se for, exibe "Você 
 C) O código verifica se a idade está entre 18 e 60 anos e, se for, imprime "Você é um adulto!". Se não estiver nesse intervalo, imprime "Você está na melhor idade!".
 
 D) O código verifica se a idade é menor de 18, entre 18 e 60 ou acima de 60, imprimindo uma mensagem específica para cada caso.
+
+**Reposta: Alternativa B**
+
+Justificativa:
+
+O código verifica a idade da pessoa e exibe uma mensagem específica:
+
+idade = entre 18 e 59, a saída será "Você é um adulto!".
+idade = menor que 18, imprime "Você é menor de idade!".
+idade = 60 ou mais, imprime "Você está na melhor idade!".
 ______
 
 **4)** Qual será o resultado impresso no console após a execução do seguinte código?
@@ -203,6 +226,15 @@ Dispositivo 4 não pode ser ligado. Energia insuficiente.
 
 Dispositivo 5 não pode ser ligado. Energia insuficiente.
 
+**Reposta: Altenativa B**
+
+Justificativa:
+
+O Dispositivo 1: 300 pode ser ligado, pois a energia disponível (1200) é suficiente, restando 900 de energia.
+O Dispositivo 2: 600 exige mais energia do que a disponível (900 - 600 = 300 restantes), então ele utiliza a bateria extra, deixando a energia total em 700.
+O Dispositivo 3: 500 pode ser ativado normalmente, já que há energia suficiente (700 - 500 = 200 restantes).
+O Dispositivo 4: 200 precisaria exatamente dessa energia, mas como a bateria extra já foi parcialmente usada e zerada, ele não pode ser ligado.
+O Dispositivo 5: 400 também não pode ser ativado, pois a energia restante não é suficiente.
 ______
 
 **5)** Qual é a principal função do método update() em um jogo desenvolvido com Phaser.js?
@@ -216,6 +248,12 @@ B) O método update() é chamado continuamente a cada quadro (frame) do jogo, se
 C) O método update() renderiza todos os sprites na tela e garante que a física do jogo seja processada corretamente.
 
 D) O método update() é chamado apenas uma vez após a criação da cena, sendo utilizado para configurar variáveis iniciais do jogo.
+
+**Reposta: Alternativa B**
+
+Justificativa:
+
+No Phaser.js, o método update() faz parte do ciclo de vida do jogo e é chamado automaticamente a cada quadro (frame). Ele é usado, por exemplo, para atualizar a lógica do jogo, como o movimento dos personagens ou a alteração de estados.
 ______
 
 **6)** Qual é o principal objetivo do módulo Matter.js Physics em Phaser.js?
@@ -229,6 +267,13 @@ B) Gerenciar eventos de entrada do usuário, como cliques e toques na tela, perm
 C) Renderizar gráficos otimizados para jogos 2D e garantir uma taxa de quadros estável.
 
 D) Criar animações automáticas para sprites e objetos interativos sem necessidade de programação de movimentação.
+
+**Reposta: Alternativa A**
+
+Justificativa:
+
+No Phaser.js, o módulo Matter.js Physics é um motor de física avançado que possibilita a simulação realista de corpos rígidos. Ele é usado, por exemplo, para lidar com colisões complexas entre objetos.
+
 
 ______
 
@@ -245,6 +290,21 @@ Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
 Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
+
+**resolução**
+```INICIO
+    ESCREVER "Digite o valor total da compra:"
+    LER valorTotal
+
+    SE valorTotal < 50 ENTAO
+        ESCREVER "Frete não disponível!"
+    SENAO SE valorTotal >= 50 E valorTotal <= 199.99 ENTAO
+        ESCREVER "Frete com custo adicional!"
+    SENAO
+        ESCREVER "Frete grátis!"
+    FIM SE
+FIM
+```
 ______
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.
@@ -262,6 +322,65 @@ Método CalcularConsumo():
 ```
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
+
+**resolução**
+
+```
+CLASSE Veiculo
+    ATRIBUTOS:
+        modelo
+        ano
+
+    MÉTODO Construtor(modelo, ano)
+        ESTE.modelo ← modelo
+        ESTE.ano ← ano
+
+    MÉTODO calcularConsumo()
+        ESCREVER "Método genérico de cálculo de consumo. Deve ser sobrescrito."
+
+FIM CLASSE
+
+CLASSE Carro HERDA Veiculo
+    ATRIBUTOS:
+        eficiencia  // Km por litro
+
+    MÉTODO Construtor(modelo, ano, eficiencia)
+        CHAMAR Construtor de Veiculo(modelo, ano)
+        ESTE.eficiencia ← eficiencia
+
+    MÉTODO calcularConsumo(quilometragem)
+        SE eficiencia > 0 ENTAO
+            RETORNAR quilometragem / eficiencia
+        SENAO
+            ESCREVER "Eficiência inválida!"
+        FIM SE
+FIM CLASSE
+
+CLASSE Moto HERDA Veiculo
+    ATRIBUTOS:
+        eficiencia  // Km por litro
+
+    MÉTODO Construtor(modelo, ano, eficiencia)
+        CHAMAR Construtor de Veiculo(modelo, ano)
+        ESTE.eficiencia ← eficiencia
+
+    MÉTODO calcularConsumo(quilometragem)
+        SE eficiencia > 0 ENTAO
+            RETORNAR quilometragem / eficiencia
+        SENAO
+            ESCREVER "Eficiência inválida!"
+        FIM SE
+FIM CLASSE
+
+// Exemplo de uso:
+INICIO
+    carro1 ← NOVO Carro("Sedan", 2020, 12)
+    moto1 ← NOVO Moto("Esportiva", 2022, 25)
+
+    ESCREVER "Consumo do carro para 240 km: ", carro1.calcularConsumo(240), " litros"
+    ESCREVER "Consumo da moto para 240 km: ", moto1.calcularConsumo(240), " litros"
+FIM
+```
 ______
 
 **9)** Você é um cientista da NASA e está ajudando no desenvolvimento de um sistema de pouso para sondas espaciais em Marte. Seu objetivo é calcular o tempo necessário para que a sonda reduza sua velocidade até um nível seguro para pouso, considerando uma velocidade inicial de entrada na atmosfera marciana e uma taxa de desaceleração constante causada pelo atrito atmosférico e retrofoguetes.
@@ -275,6 +394,44 @@ Considere a fórumla de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+
+
+**resolução**
+```
+INICIO
+    // Definir os parâmetros da simulação
+    ESCREVER "Digite a velocidade inicial da sonda (m/s):"
+    LER velocidadeInicial
+    
+    ESCREVER "Digite a taxa de desaceleração (m/s²):"
+    LER desaceleracao
+    
+    ESCREVER "Digite a velocidade segura de pouso (m/s):"
+    LER velocidadeSegura
+    
+    ESCREVER "Digite o tempo máximo permitido para descida (s):"
+    LER tempoMaximo
+
+    // Inicializar variáveis
+    tempo ← 0
+    velocidade ← velocidadeInicial
+
+    // Simulação da descida
+    ENQUANTO velocidade > velocidadeSegura E tempo < tempoMaximo FAÇA
+        velocidade ← velocidadeInicial - desaceleracao * tempo
+        SE velocidade <= velocidadeSegura ENTAO
+            ESCREVER "A sonda atingiu uma velocidade segura após ", tempo, " segundos."
+            PARAR
+        FIM SE
+        tempo ← tempo + 1
+    FIM ENQUANTO
+
+    // Verificar se a sonda não conseguiu atingir a velocidade segura no tempo limite
+    SE velocidade > velocidadeSegura ENTAO
+        ESCREVER "A sonda não conseguiu reduzir a velocidade dentro do tempo máximo permitido!"
+    FIM SE
+FIM
+```
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
@@ -307,3 +464,32 @@ Escrever("Total de investimentos acumulados:")
 ImprimirMatriz(totalInvestimentos)  
 ```
 Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
+
+```
+**resolução**
+Função MultiplicarMatrizesInvestimento(matrizA, matrizB):  
+    # Verifica se a multiplicação é possível (número de colunas da matriz A == número de linhas da matriz B)  
+    Se tamanho(matrizA[0]) ≠ tamanho(matrizB) então:  
+        Retornar "As matrizes não podem ser multiplicadas. O número de colunas de A deve ser igual ao número de linhas de B."  
+    Senão:  
+        linhasA <- tamanho(matrizA)  
+        colunasA <- tamanho(matrizA[0])  
+        colunasB <- tamanho(matrizB[0])  
+        matrizResultado <- novaMatriz(linhasA, colunasB, 0)  
+
+        # Loop para percorrer cada elemento das matrizes e calcular a multiplicação  
+        Para i de 0 até linhasA - 1 faça:  
+            Para j de 0 até colunasB - 1 faça:  
+                Para k de 0 até colunasA - 1 faça:  
+                    matrizResultado[i][j] <- matrizResultado[i][j] + (matrizA[i][k] * matrizB[k][j])  
+
+        Retornar matrizResultado  
+
+# Exemplo de uso da função  
+investimentosAno1 <- [[1000, 2000], [1500, 2500]]  
+fatoresCrescimento <- [[1.1, 0.9], [1.05, 1.2]]  
+
+resultadoInvestimentos <- MultiplicarMatrizesInvestimento(investimentosAno1, fatoresCrescimento)  
+Escrever("Impacto dos fatores de crescimento nos investimentos:")  
+ImprimirMatriz(resultadoInvestimentos)
+```
