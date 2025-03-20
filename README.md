@@ -465,8 +465,9 @@ ImprimirMatriz(totalInvestimentos)
 ```
 Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
 
-```
+
 **resolução**
+```
 Função MultiplicarMatrizesInvestimento(matrizA, matrizB):  
     # Verifica se a multiplicação é possível (número de colunas da matriz A == número de linhas da matriz B)  
     Se tamanho(matrizA[0]) ≠ tamanho(matrizB) então:  
